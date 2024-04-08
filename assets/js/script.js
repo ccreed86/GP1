@@ -1,6 +1,23 @@
 const gifContainer = document.querySelector("#gifContainer");
 const gigglesContainer = document.querySelector("#gigglesContainer");
 
+//let category==user input
+
+let gifyKeyR='fNQfgqsi1G5OnBPBlie4e1lN3wVCBTTk'
+const category = "pun";
+// const category = inputForm category
+const jokeUrl=`https://v2.jokeapi.dev/joke/${category}?format=json?blacklistFlags=nsfw,religious,political,racist,sexist,explicit`
+const gifyKey='9tWD3JSotxpdhYNXTURQMtKldzGKZt2t'
+const gifyUrl= `https://api.giphy.com/v1/gifs/search?api_key=${gifyKey}&q=${category}&limit=1&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+
+
+fetchData();
+async function fetchData() {
+    try {
+        console.log("2")
+
+        const jokeResponse = await fetch(jokeUrl); // Fetching data from the joke API
+=======
 const category = "pun";
 // const category = inputForm category
 const jokeUrl=`https://v2.jokeapi.dev/joke/${category}?format=json`
