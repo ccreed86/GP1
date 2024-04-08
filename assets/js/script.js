@@ -1,14 +1,17 @@
 const gifContainer = document.querySelector("#gifContainer");
+
 const gigglesContainer = document.querySelector("#gigglesContainer");
 
-//let category==user input
+const initModal = document.querySelector("#intModal")
 
+const modal = document.querySelector(".modal")
+//let category==user input
 let gifyKeyR='fNQfgqsi1G5OnBPBlie4e1lN3wVCBTTk'
 const category = "pun";
 // const category = inputForm category
 const jokeUrl=`https://v2.jokeapi.dev/joke/${category}?format=json?blacklistFlags=nsfw,religious,political,racist,sexist,explicit`
 const gifyKey='9tWD3JSotxpdhYNXTURQMtKldzGKZt2t'
-const gifyUrl= `https://api.giphy.com/v1/gifs/search?api_key=${gifyKey}&q=${category}&limit=1&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+const gifyUrl= `https://api.giphy.com/v1/gifs/search?api_key=${gifyKeyR}&q=${category}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
 
 
 
@@ -84,25 +87,26 @@ gifSetup();
 
     function gifSetup(){
 
+        let count = Math.floor(Math.random() * 25);
+
         const gifSetup = document.createElement("img");
 
         const gifInfo = JSON.parse(localStorage.getItem("gif"));
 
-        gifSetup.src = gifInfo.data[0].images.original.url;
+        gifSetup.src = gifInfo.data[count].images.original.url;
 
         gifContainer.appendChild(gifSetup);
 
     }
 
+
+    initModal.addEventListener("click", function(event){
+
+        event.preventDefault();
+
+        modal.classList.add('is-active');
+        
+    })
     //joke/ setup &delivery
     // request input from user for a categorie(obrigatory)
-    // if for single joke or twoparts joke
-    // for the twopart joke we are going to use .setup: joke, .delivery: answer for twopart joke
-    // if single it changes for .joke
     // .category: "Programming", "Misc", "Pun", "Spooky" and "Christmas"
-
-
-    // Gify setup
-    // it needs to match the joke categorie
-    // get the .data.0.embed_url
-    // we need to set an continer to the image and append to the gifContainer
