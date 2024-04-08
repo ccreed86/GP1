@@ -1,6 +1,10 @@
 const gifContainer = document.querySelector("#gifContainer");
+
 const gigglesContainer = document.querySelector("#gigglesContainer");
 
+const initModal = document.querySelector("#intModal")
+
+const modal = document.querySelector(".modal")
 //let category==user input
 let gifyKeyR='fNQfgqsi1G5OnBPBlie4e1lN3wVCBTTk'
 const category = "pun";
@@ -95,15 +99,14 @@ gifSetup();
 
     }
 
+
+    initModal.addEventListener("click", function(event){
+
+        event.preventDefault();
+
+        modal.classList.add('is-active');
+        
+    })
     //joke/ setup &delivery
     // request input from user for a categorie(obrigatory)
-    // if for single joke or twoparts joke
-    // for the twopart joke we are going to use .setup: joke, .delivery: answer for twopart joke
-    // if single it changes for .joke
     // .category: "Programming", "Misc", "Pun", "Spooky" and "Christmas"
-
-
-    // Gify setup
-    // it needs to match the joke categorie
-    // get the .data.0.embed_url
-    // we need to set an continer to the image and append to the gifContainer
