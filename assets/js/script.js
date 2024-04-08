@@ -84,17 +84,13 @@ gifSetup();
 
     function gifSetup(){
 
-        const gifDivContainer = document.createElement("div");
-
         const gifSetup = document.createElement("img");
 
         const gifInfo = JSON.parse(localStorage.getItem("gif"));
 
-        gifSetup.textContent = gifInfo.data[0].embed_url;
+        gifSetup.src = gifInfo.data[0].images.original.url;
 
-        gifDivContainer.appendChild(gifSetup);
-
-        gifContainer.appendChild(gifDivContainer);
+        gifContainer.appendChild(gifSetup);
 
     }
 
