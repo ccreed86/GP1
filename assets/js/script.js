@@ -17,7 +17,7 @@ async function fetchData() {
         console.log("2")
 
         const jokeResponse = await fetch(jokeUrl); // Fetching data from the joke API
-=======
+
 const category = "pun";
 // const category = inputForm category
 const jokeUrl=`https://v2.jokeapi.dev/joke/${category}?format=json`
