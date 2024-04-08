@@ -4,10 +4,13 @@ const gigglesContainer = document.querySelector("#gigglesContainer");
 const category = "pun";
 // const category = inputForm category
 const jokeUrl=`https://v2.jokeapi.dev/joke/${category}?format=json`
+
 const gifyKey='9tWD3JSotxpdhYNXTURQMtKldzGKZt2t'
-const gifyUrl= `https://api.giphy.com/v1/gifs/search?api_key=${gifyKey}&q=${category}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+
+const gifyUrl= `https://api.giphy.com/v1/gifs/search?api_key=${gifyKey}&q=${category}&limit=1&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
 
 fetchData();
+
 async function fetchData() {
     try {
         console.log("2")
@@ -40,6 +43,9 @@ async function fetchData() {
 
 
 jokeSetup();
+
+gifSetup();
+
 }
     function jokeSetup(){
 
@@ -71,9 +77,23 @@ jokeSetup();
 
     gigglesContainer.appendChild(jokeContainer);
 
-    jokeContainer.innerHTML = "";
-
 }
+
+    function gifSetup(){
+
+        const gifDivContainer = document.createElement("div");
+
+        const gifSetup = document.createElement("img");
+
+        const gifInfo = JSON.parse(localStorage.getItem("gif"));
+
+        gifSetup.textContent = gifInfo.data[0].embed_url;
+
+        gifDivContainer.appendChild(gifSetup);
+
+        gifContainer.appendChild(gifDivContainer);
+
+    }
 
     //joke/ setup &delivery
     // request input from user for a categorie(obrigatory)
@@ -81,3 +101,9 @@ jokeSetup();
     // for the twopart joke we are going to use .setup: joke, .delivery: answer for twopart joke
     // if single it changes for .joke
     // .category: "Programming", "Misc", "Pun", "Spooky" and "Christmas"
+
+
+    // Gify setup
+    // it needs to match the joke categorie
+    // get the .data.0.embed_url
+    // we need to set an continer to the image and append to the gifContainer
