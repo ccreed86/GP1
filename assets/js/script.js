@@ -84,7 +84,6 @@ gifSetup();
 
     function gifSetup(){
 
-
         const gifSetup = document.createElement("img");
 
         const gifInfo = JSON.parse(localStorage.getItem("gif"));
@@ -92,8 +91,6 @@ gifSetup();
         gifSetup.src = gifInfo.data[0].images.original.url;
 
         gifContainer.appendChild(gifSetup);
-
-       
 
     }
 
