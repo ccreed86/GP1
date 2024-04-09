@@ -22,40 +22,33 @@
     <!--BUTTON SHOULD INITIALIZE MODEL FOR INPUT-->
             <button class="button" id="intModal">Button</button>
     <!--THIS IS THE MODAL -->        
-    <div id="modal-js-example" class="modal">Choose your catagory
-        <div class="modal-background "></div>
-            <div class="modal-content">
+    <div class="modal">Choose your catagory
+        <div class="modal-background"></div>
+        <div class="modal-content">
           <!-- Any other Bulma elements you want -->
-          <p class="modal-card-title">Choose your laugh!</p>
-                <form action=''class="control">
-                    <div class="select">
-                        <select name='dropdown'class="dropdown" type="input">
-                            <option value="programming">programming</option>
-                            <option value="pun">pun</option>
-                            <option value="spooky">spooky</option>
-                            <option value="christmas">christmas</option>
-                            <option value="misc">misc</option>
-                        </select>
-                        
-                    </div>
-                    <button id='submitButton' type="submit" class="button is-success">Submit</button>
-                    <button class="modal-close is-large" aria-label="close"></button>
-                </form>
-            </div>
-   
-
+          <div class="select">
+            <select>
+              <option>Select dropdown</option>
+              <option>With options</option>
+            </select>
+          </div>
+        </div>
+        <button id ="submitButton" class="modal-close is-large" aria-label="close"></button>
+    </div>
+        </div>
     </header>
 
     <!--THIS SECTION CONTAINS THE GIF N GIGGLES CONTAINERS AND TITLES-->
     <section class="columns" id=""> 
         
     <!--THIS IS THE GIFS CONTAINER WITH PLACE HOLDER-->
-        <h2 class="column is-half is-centered" >Gifs 🖼️
+    <div class="gif column">   
+        <h2> Gifs 🖼️</h2> 
         <figure id="gifContainer"></figure>
-        </h2>
+    </div>
     <!--THIS IS THE GIGGLES CONTAINER - BEING APPENED TO VIA JS-->        
-        <div class="container" id="gigglesContainer">
-        <h2 class="column is-half is-centered">Giggles 😂</h2>
+    <div class="column" id="gigglesContainer">
+        <h2>Giggles 😂</h2>
     </div>
     </section>
     <footer></footer>

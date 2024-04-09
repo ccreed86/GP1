@@ -32,3 +32,10 @@
 /* Light Theme */
 /* Header/Fotter --darkFont(background) --lightFont(font color) */
 /* Body --lightBackground(background) --lightFont(font color) */
+.text-center {
+        text-align: center;
+}
+
+.gif {
+    width: 50%;
+}
