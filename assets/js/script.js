@@ -20,10 +20,10 @@ dropdownButton.addEventListener('click', function(event){ //fx for submit button
 
   let category=dropdownList.value
 
-  console.log(category)
-
   fetchData(category) //calls fetchdata fx and passes on the category input
 
+  // it close the modal when the user finish choosing the category
+  modal.classList.remove('is-active');
 
 })
 
@@ -94,18 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
-
-
-
-
 async function fetchData(category) { ///fetches api data and stores it in local
     try {
-
+        // below just a random index to get different key for the gify(it have a low rate limit so we got 4 differents keys to keep using)
         let keyIndex = Math.floor(Math.random() * 4);
-
+        // below its the random key variable
         const gifyKey = gifyKeyR[keyIndex];
-
-        console.log(gifyKey);
         
         let jokeUrl=`https://v2.jokeapi.dev/joke/${category}?format=json?blacklistFlags=nsfw,religious,political,racist,sexist,explicit`
         
@@ -138,13 +132,14 @@ async function fetchData(category) { ///fetches api data and stores it in local
         
     }  jokeSetup();
 
-
-
-
 }
+
+// below we have the joke function that will create the container and append to our gif and giggles containers
     function jokeSetup(){
 
         const jokeContainer = document.createElement("div");
+
+        jokeContainer.className = "divGiggles";
 
         const jokeSetup = document.createElement("p");
 
@@ -181,6 +176,8 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         const gifSetup = document.createElement("img");
 
+        gifSetup.className = "imgGif";
+
         const gifInfo = JSON.parse(localStorage.getItem("gif"));
 
         gifSetup.src = gifInfo.data[count].images.original.url;
@@ -189,28 +186,36 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
     }
 
+    // and function that will initialize the modal when the user click the button
     initModal.addEventListener("click", function(event){
 
       event.preventDefault();
-
+      // below set the modal active to open
       modal.classList.add('is-active');
 
-      while(gifContainer.hasChildNodes()){
+      // two loops to clean the html from the previous choice, that way the user always see a new joke and gif
+      if(gifContainer.hasChildNodes()){
+        
+        const gifContainerImg = document.querySelector(".imgGif");
 
-        gifContainer.removeChild(gifContainer.firstChild);
-  
+        if(gifContainerImg){
+
+        gifContainer.removeChild(gifContainerImg);
+
       }
-      while(gigglesContainer.hasChildNodes()){
-  
-        gigglesContainer.removeChild(gigglesContainer.firstChild);
-  
+
+      }
+
+      if(gigglesContainer.hasChildNodes()){
+
+        const gigglesContainerP = document.querySelector(".divGiggles");
+
+        if(gigglesContainerP){
+
+        gigglesContainer.removeChild(gigglesContainerP);
+
+      }
+
       }
         
     })
-    //joke/ setup &delivery
-    // request input from user for a categorie(obrigatory)
-    // .category: "Programming", "Misc", "Pun", "Spooky" and "Christmas"
-    ///initialize modal 
-    //receive information from form select
-    //add event listener for the submit button
-    // add input to the category variable
