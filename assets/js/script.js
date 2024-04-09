@@ -177,7 +177,7 @@ async function fetchData(category) { ///fetches api data and stores it in local
 }
 
 
-    function gifSetup(){//fx to get a random gif from the associated category
+    function gifSetup(){ //fx to get a random gif from the associated category
 
         let count = Math.floor(Math.random() * 25);
 
@@ -226,4 +226,4 @@ async function fetchData(category) { ///fetches api data and stores it in local
       }
         
     })
-// TODO: delay for the delivery so i dont display instant
+
