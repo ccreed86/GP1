@@ -24,7 +24,7 @@ dropdownButton.addEventListener('click', function(event){ //fx for submit button
 
   fetchData(category) //calls fetchdata fx and passes on the category input
 
-
+  modal.classList.remove('is-active');
 })
 
 document.querySelector('.button')
@@ -100,9 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchData(category) { ///fetches api data and stores it in local
     try {
-
+        // below just a random index to get different key for the gify(it have a low rate limit so we got 4 differents keys to keep using)
         let keyIndex = Math.floor(Math.random() * 4);
-
+        // below its the random key variable
         const gifyKey = gifyKeyR[keyIndex];
 
         console.log(gifyKey);
@@ -142,6 +142,8 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
 
 }
+
+// below we have the joke function that will create the container and append to our gif and giggles containers
     function jokeSetup(){
 
         const jokeContainer = document.createElement("div");
@@ -189,10 +191,11 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
     }
 
+    // and function that will initialize the modal when the user click the button
     initModal.addEventListener("click", function(event){
 
       event.preventDefault();
-
+      // below set the modal active to open
       modal.classList.add('is-active');
 
       while(gifContainer.hasChildNodes()){
