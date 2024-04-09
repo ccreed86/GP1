@@ -20,6 +20,36 @@
     padding-bottom: 20px;
 }
 
+
+/* Theme Switcher styles */
+/* Dark Styles Start */
+.dark header, footer{
+    background-color: var(--lightFont);
+    color: var(--darkFont);
+}
+
+.dark #mainBody {
+    background-color: var(--darkBackground);
+    color: var(--darkFont);
+}
+
+/* Dark Styles End */
+
+/* Light Styles Start */
+
+.light header, footer{
+    background-color: var(--darkFont);
+    color: var(--lightFont);
+}
+
+.ligh #mainBody {
+    background-color: var(--lightBackground);
+    color: var(--lightFont)
+}
+
+
+
+/* Light Styles End */
 /* TODO LIST For Theme */
 
 /* Button to change the themes*/

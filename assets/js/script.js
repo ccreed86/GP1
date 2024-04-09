@@ -9,7 +9,21 @@ const initModal = document.querySelector("#intModal");
 const dropdownList=document.querySelector('.dropdown');
 
 const modal = document.querySelector(".modal");
+// below the theme selector and the variables
+const themeSwitcher = document.querySelector("#themeSwitcher");
 
+const container = document.querySelector(".container");
+
+const mainBody = document.querySelector("#mainBody");
+
+let mode = "dark";
+
+let modeType;
+
+let themeStorage;
+
+saveTheme();
+// Finish here the theme settings
 const gifyKeyR = ['fNQfgqsi1G5OnBPBlie4e1lN3wVCBTTk', '9tWD3JSotxpdhYNXTURQMtKldzGKZt2t', "jndGrbHB8UNfs39YHeJrJxvGYGulBx2p", "dV41RjkIQ6RJa2Max5a1rGtLNk4c43Hw"];
 
 dropdownButton.addEventListener('click', function(event){ //fx for submit button in modal
@@ -219,4 +233,40 @@ async function fetchData(category) { ///fetches api data and stores it in local
       }
         
     })
+
+    // Below Function to save the theme and check if exist
+    function saveTheme() {
+      if(localStorage.getItem("theme")  === null){
+        themeStorage = localStorage.setItem("theme", "dark");
+        mainBody.className = "has-background-black";
+        themeSwitcher.textContent = "🤣";
+      } 
+        themeStorage = localStorage.getItem("theme", modeType);
+        if (themeStorage === "dark"){
+          mainBody.className = "has-background-black";
+          themeSwitcher.textContent = "🤣";
+        }else{
+          mainBody.className = "has-background-white";
+          themeSwitcher.textContent = "😂";
+        }
+        container.setAttribute("class", themeStorage);
+      }
+
+    // Theme Switcher button
+    themeSwitcher.addEventListener("click", function() {
+      console.log(mode);
+      if (mode === "dark") {
+        mode = "light"
+        localStorage.setItem("theme", "light");
+        mainBody.className = "has-background-white";
+        themeSwitcher.textContent = "😂";
+      }else {
+        mode = "dark"
+        localStorage.setItem("theme", "dark");
+        mainBody.className = "has-background-black";
+        themeSwitcher.textContent = "🤣";
+      }
+      modeType = mode;
+      saveTheme();
+    });
 // TODO: delay for the delivery so i dont display instant
