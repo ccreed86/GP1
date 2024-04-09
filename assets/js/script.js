@@ -198,7 +198,6 @@ async function fetchData(category) { ///fetches api data and stores it in local
         
         const gifContainerImg = document.querySelector(".imgGif");
 
-        console.log(gifContainerImg)
         if(gifContainerImg){
 
         gifContainer.removeChild(gifContainerImg);
@@ -210,8 +209,6 @@ async function fetchData(category) { ///fetches api data and stores it in local
       if(gigglesContainer.hasChildNodes()){
 
         const gigglesContainerP = document.querySelector(".divGiggles");
-
-        console.log(gigglesContainer);
 
         if(gigglesContainerP){
 
