@@ -139,6 +139,8 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         const jokeContainer = document.createElement("div");
 
+        jokeContainer.className = "divGiggles";
+
         const jokeSetup = document.createElement("p");
 
         const jokeDelivery = document.createElement("p");
@@ -174,6 +176,8 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         const gifSetup = document.createElement("img");
 
+        gifSetup.className = "imgGif";
+
         const gifInfo = JSON.parse(localStorage.getItem("gif"));
 
         gifSetup.src = gifInfo.data[count].images.original.url;
@@ -190,15 +194,31 @@ async function fetchData(category) { ///fetches api data and stores it in local
       modal.classList.add('is-active');
 
       // two loops to clean the html from the previous choice, that way the user always see a new joke and gif
-      while(gifContainer.hasChildNodes()){
+      if(gifContainer.hasChildNodes()){
+        
+        const gifContainerImg = document.querySelector(".imgGif");
 
-        gifContainer.removeChild(gifContainer.firstChild);
-  
+        console.log(gifContainerImg)
+        if(gifContainerImg){
+
+        gifContainer.removeChild(gifContainerImg);
+
       }
-      while(gigglesContainer.hasChildNodes()){
-  
-        gigglesContainer.removeChild(gigglesContainer.firstChild);
-  
+
+      }
+
+      if(gigglesContainer.hasChildNodes()){
+
+        const gigglesContainerP = document.querySelector(".divGiggles");
+
+        console.log(gigglesContainer);
+
+        if(gigglesContainerP){
+
+        gigglesContainer.removeChild(gigglesContainerP);
+
+      }
+
       }
         
     })
