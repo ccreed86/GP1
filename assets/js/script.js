@@ -219,3 +219,4 @@ async function fetchData(category) { ///fetches api data and stores it in local
       }
         
     })
+// TODO: delay for the delivery so i dont display instant
