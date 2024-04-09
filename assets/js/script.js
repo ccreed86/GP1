@@ -219,10 +219,3 @@ async function fetchData(category) { ///fetches api data and stores it in local
       }
         
     })
-    //joke/ setup &delivery
-    // request input from user for a categorie(obrigatory)
-    // .category: "Programming", "Misc", "Pun", "Spooky" and "Christmas"
-    ///initialize modal 
-    //receive information from form select
-    //add event listener for the submit button
-    // add input to the category variable
