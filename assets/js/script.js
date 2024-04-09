@@ -10,9 +10,7 @@ const dropdownList=document.querySelector('.dropdown');
 
 const modal = document.querySelector(".modal");
 
-let gifyKeyR='fNQfgqsi1G5OnBPBlie4e1lN3wVCBTTk'
-
-const gifyKey='9tWD3JSotxpdhYNXTURQMtKldzGKZt2t'
+const gifyKeyR = ['fNQfgqsi1G5OnBPBlie4e1lN3wVCBTTk', '9tWD3JSotxpdhYNXTURQMtKldzGKZt2t', "jndGrbHB8UNfs39YHeJrJxvGYGulBx2p", "dV41RjkIQ6RJa2Max5a1rGtLNk4c43Hw"];
 
 dropdownButton.addEventListener('click', function(event){ //fx for submit button in modal
 
@@ -102,11 +100,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchData(category) { ///fetches api data and stores it in local
     try {
-        
 
+        let keyIndex = Math.floor(Math.random() * 4);
+
+        const gifyKey = gifyKeyR[keyIndex];
+
+        console.log(gifyKey);
+        
         let jokeUrl=`https://v2.jokeapi.dev/joke/${category}?format=json?blacklistFlags=nsfw,religious,political,racist,sexist,explicit`
         
-        let gifyUrl= `https://api.giphy.com/v1/gifs/search?api_key=${gifyKeyR}&q=${category}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+        let gifyUrl= `https://api.giphy.com/v1/gifs/search?api_key=${gifyKey}&q=${category}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
 
 
         const jokeResponse = await fetch(jokeUrl); // Fetching data from the joke API
@@ -188,9 +191,20 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
     initModal.addEventListener("click", function(event){
 
-        event.preventDefault();
+      event.preventDefault();
 
-        modal.classList.add('is-active');
+      modal.classList.add('is-active');
+
+      while(gifContainer.hasChildNodes()){
+
+        gifContainer.removeChild(gifContainer.firstChild);
+  
+      }
+      while(gigglesContainer.hasChildNodes()){
+  
+        gigglesContainer.removeChild(gigglesContainer.firstChild);
+  
+      }
         
     })
     //joke/ setup &delivery
