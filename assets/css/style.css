@@ -1,3 +1,15 @@
+:root {
+    --darkBackground: #222831;
+    --lightFont: #393e46;
+    --darkFont: #f96d00;
+    --lightBackground: #f2f2f2;
+    --fontFamily: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+*{ 
+    font-family: var(--fontFamily);
+}
+
 #submitButton{
     width: 5rem;
     height: 3rem;
@@ -7,3 +19,16 @@
 .modal-card-title {
     padding-bottom: 20px;
 }
+
+/* TODO LIST For Theme */
+
+/* Button to change the themes*/
+/* localStorage for color so even if you refresh the page it keeps your choice */
+
+/* Dark Theme */
+/* Header/Footer --lightFont(background) --darkFont(font color)*/
+/* Body --darkBackground(background) --darkFont(font color)*/
+
+/* Light Theme */
+/* Header/Fotter --darkFont(background) --lightFont(font color) */
+/* Body --lightBackground(background) --lightFont(font color) */
