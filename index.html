@@ -22,20 +22,26 @@
     <!--BUTTON SHOULD INITIALIZE MODEL FOR INPUT-->
             <button class="button" id="intModal">Button</button>
     <!--THIS IS THE MODAL -->        
-    <div class="modal">Choose your catagory
+    <div id="modal-js-example" class="modal">Choose your catagory
         <div class="modal-background"></div>
-        <div class="modal-content">
+            <div class="modal-content">
           <!-- Any other Bulma elements you want -->
-          <div class="select">
-            <select>
-              <option>Select dropdown</option>
-              <option>With options</option>
-            </select>
-          </div>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-        </div>
+                <form action=''class="control">
+                    <div class="select">
+                        <select name='dropdown'class="dropdown" type="input">
+                            <option value="programming">programming</option>
+                            <option value="pun">pun</option>
+                            <option value="spooky">spooky</option>
+                            <option value="christmas">christmas</option>
+                            <option value="misc">misc</option>
+                        </select>
+                        
+                    </div>
+                    <button id='submitButton' type="submit" class="button is-success">Submit</button>
+                </form>
+            </div>
+   
+
     </header>
 
     <!--THIS SECTION CONTAINS THE GIF N GIGGLES CONTAINERS AND TITLES-->

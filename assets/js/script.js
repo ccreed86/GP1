@@ -2,24 +2,112 @@ const gifContainer = document.querySelector("#gifContainer");
 
 const gigglesContainer = document.querySelector("#gigglesContainer");
 
-const initModal = document.querySelector("#intModal")
+const dropdownButton= document.querySelector('#submitButton');
 
-const modal = document.querySelector(".modal")
-//let category==user input
+const initModal = document.querySelector("#intModal");
+
+const dropdownList=document.querySelector('.dropdown');
+
+const modal = document.querySelector(".modal");
+
 let gifyKeyR='fNQfgqsi1G5OnBPBlie4e1lN3wVCBTTk'
-const category = "pun";
-// const category = inputForm category
-const jokeUrl=`https://v2.jokeapi.dev/joke/${category}?format=json?blacklistFlags=nsfw,religious,political,racist,sexist,explicit`
+
 const gifyKey='9tWD3JSotxpdhYNXTURQMtKldzGKZt2t'
-const gifyUrl= `https://api.giphy.com/v1/gifs/search?api_key=${gifyKeyR}&q=${category}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+
+dropdownButton.addEventListener('click', function(event){ //fx for submit button in modal
+
+  event.preventDefault();
+
+  event.stopPropagation();
+
+  let category=dropdownList.value
+
+  console.log(category)
+
+  fetchData(category) //calls fetchdata fx and passes on the category input
+
+
+})
+
+document.querySelector('.button')
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Functions to open and close a modal
+    function openModal($el) {
+
+      $el.classList.add('is-active');
+
+    }
+  
+    function closeModal($el) {
+
+      $el.classList.remove('is-active');
+
+    }
+  
+    function closeAllModals() {
+
+      (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+
+        closeModal($modal);
+
+      });
+
+    }
+  
+    // Add a click event on buttons to open a specific modal
+    (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+
+      const modal = $trigger.dataset.target;
+
+      const $target = document.getElementById(modal);
+  
+      $trigger.addEventListener('click', () => {
+
+        openModal($target);
+
+      });
+
+    });
+  
+    // Add a click event on various child elements to close the parent modal
+    (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+
+      const $target = $close.closest('.modal');
+  
+      $close.addEventListener('click', () => {
+
+        closeModal($target);
+
+      });
+
+    });
+  
+    // Add a keyboard event to close all modals
+    document.addEventListener('keydown', (event) => {
+
+      if(event.key === "Escape") {
+
+        closeAllModals();
+
+      }
+
+    });
+
+  });
 
 
 
-fetchData();
 
-async function fetchData() {
+
+async function fetchData(category) { ///fetches api data and stores it in local
     try {
-        console.log("2")
+        
+
+        let jokeUrl=`https://v2.jokeapi.dev/joke/${category}?format=json?blacklistFlags=nsfw,religious,political,racist,sexist,explicit`
+        
+        let gifyUrl= `https://api.giphy.com/v1/gifs/search?api_key=${gifyKeyR}&q=${category}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+
 
         const jokeResponse = await fetch(jokeUrl); // Fetching data from the joke API
 
@@ -45,12 +133,10 @@ async function fetchData() {
 
         console.error("Error fetching data:", error);
         
-    }
+    }  jokeSetup();
 
 
-jokeSetup();
 
-gifSetup();
 
 }
     function jokeSetup(){
@@ -83,9 +169,10 @@ gifSetup();
 
     gigglesContainer.appendChild(jokeContainer);
 
+    gifSetup();
 }
 
-    function gifSetup(){
+    function gifSetup(){//fx to get a random gif from the associated category
 
         let count = Math.floor(Math.random() * 25);
 
@@ -99,7 +186,6 @@ gifSetup();
 
     }
 
-
     initModal.addEventListener("click", function(event){
 
         event.preventDefault();
@@ -110,3 +196,7 @@ gifSetup();
     //joke/ setup &delivery
     // request input from user for a categorie(obrigatory)
     // .category: "Programming", "Misc", "Pun", "Spooky" and "Christmas"
+    ///initialize modal 
+    //receive information from form select
+    //add event listener for the submit button
+    // add input to the category variable
