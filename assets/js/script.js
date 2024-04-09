@@ -20,11 +20,11 @@ dropdownButton.addEventListener('click', function(event){ //fx for submit button
 
   let category=dropdownList.value
 
-  console.log(category)
-
   fetchData(category) //calls fetchdata fx and passes on the category input
 
+  // it close the modal when the user finish choosing the category
   modal.classList.remove('is-active');
+
 })
 
 document.querySelector('.button')
@@ -94,18 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
-
-
-
-
 async function fetchData(category) { ///fetches api data and stores it in local
     try {
         // below just a random index to get different key for the gify(it have a low rate limit so we got 4 differents keys to keep using)
         let keyIndex = Math.floor(Math.random() * 4);
         // below its the random key variable
         const gifyKey = gifyKeyR[keyIndex];
-
-        console.log(gifyKey);
         
         let jokeUrl=`https://v2.jokeapi.dev/joke/${category}?format=json?blacklistFlags=nsfw,religious,political,racist,sexist,explicit`
         
@@ -137,9 +131,6 @@ async function fetchData(category) { ///fetches api data and stores it in local
         console.error("Error fetching data:", error);
         
     }  jokeSetup();
-
-
-
 
 }
 
@@ -198,6 +189,7 @@ async function fetchData(category) { ///fetches api data and stores it in local
       // below set the modal active to open
       modal.classList.add('is-active');
 
+      // two loops to clean the html from the previous choice, that way the user always see a new joke and gif
       while(gifContainer.hasChildNodes()){
 
         gifContainer.removeChild(gifContainer.firstChild);
