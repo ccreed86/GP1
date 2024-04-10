@@ -28,6 +28,12 @@
 width: 50%;
 }
 
+.containers {
+    display: flex;
+    justify-content: space-around;
+    padding: px;
+}
+
 /* TODO LIST For Theme */
 
 /* Button to change the themes*/

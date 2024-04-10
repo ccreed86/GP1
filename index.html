@@ -11,12 +11,12 @@
 </head>
 
 <body>
-    <header class="section text-center">
+    <header class="section text-center is-size-3">
         <div class="container">
             <h1 class="title">
                 Gifs & Giggles
             </h1>
-            <p class="subtitle">
+            <p class="subtitle ">
                 Have a laugh!
             </p>
     <!--BUTTON SHOULD INITIALIZE MODEL FOR INPUT-->
@@ -36,30 +36,28 @@
                             <option value="christmas">christmas</option>
                             <option value="misc">misc</option>
                         </select>
-                        
-                    </div>
+                        </div>
                     <button id='submitButton' type="submit" class="button is-success">Submit</button>
                     <button class="modal-close is-large" aria-label="close"></button>
                 </form>
             </div>
-   
-
     </header>
 
     <!--THIS SECTION CONTAINS THE GIF N GIGGLES CONTAINERS AND TITLES-->
-    <section class="columns" id=""> 
+    <section class="columns has-text-warning is-size-3" id="containers"> 
         
     <!--THIS IS THE GIFS CONTAINER WITH PLACE HOLDER-->
-    <div>   
-        <h2 class="column" >Gifs🃏</h2> 
-        <figure id="gifContainer"></figure>
+    <div class="container mx-6 p-2">   
+        <h2 class="column has-text-centered py-6" >Gifs🃏</h2> 
+        <figure class="my-4" id="gifContainer"></figure>
     </div>
     
     <!--THIS IS THE GIGGLES CONTAINER - BEING APPENED TO VIA JS-->        
-        <div class="container" id="gigglesContainer">
-        <h2 class="column">Giggles 😂</h2>
+        <div class="container mx-6 p-2 has-text-centered" id="gigglesContainer">
+        <h2 class="column py-6">Giggles 😂</h2>
     </div>
     </section>
+
     <footer></footer>
     <script src="./assets/js/script.js"></script>
 </body>
