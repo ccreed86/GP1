@@ -186,7 +186,13 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         jokeContainer.appendChild(jokeSetup);
 
-        jokeContainer.appendChild(jokeDelivery);
+        setTimeout(()=> {
+          jokeContainer.appendChild(jokeDelivery);//delays the delivery of the 2 part joke for 3 seconds
+        }
+        ,3000);
+        
+       
+        // jokeContainer.appendChild(jokeDelivery);
 
     }else {
 
@@ -201,7 +207,8 @@ async function fetchData(category) { ///fetches api data and stores it in local
     gifSetup();
 }
 
-    function gifSetup(){//fx to get a random gif from the associated category
+
+    function gifSetup(){ //fx to get a random gif from the associated category
 
         let count = Math.floor(Math.random() * 50);
 
