@@ -32,26 +32,52 @@
 
 /* Theme Switcher styles */
 /* Dark Styles Start */
-.dark header, footer{
+.dark header{
+    
     background-color: var(--lightFont);
     color: var(--darkFont);
 }
 
+.dark footer{
+
+    background-color: var(--lightFont);
+    
+}
+
+.dark footer a{
+
+    color: var(--darkFont);
+
+}
+
 .dark #mainBody {
+
     background-color: var(--darkBackground);
     color: var(--darkFont);
+
 }
 
 /* Dark Styles End */
 
 /* Light Styles Start */
 
-.light header, footer{
+.light header{
+
     background-color: var(--darkFont);
     color: var(--lightFont);
 }
 
+.light footer {
+
+    background-color: var(--darkFont);
+}
+.light footer a{
+
+    color: var(--lightFont);
+}
+
 .ligh #mainBody {
+
     background-color: var(--lightBackground);
     color: var(--lightFont)
 }
