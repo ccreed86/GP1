@@ -1,7 +1,7 @@
 :root {
     --darkBackground: #222831;
     --lightFont: #393e46;
-    --darkFont: #f96d00;
+    --darkFont: #005792;
     --lightBackground: #f2f2f2;
     --fontFamily: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -27,7 +27,8 @@
     padding-bottom: 20px;
 }
 
-.text-center {
+.text-center, 
+#gifContainer{
     text-align: center;
 }
 #gigglesContainer{
@@ -53,8 +54,20 @@
 
 }
 
+.jokeDelivery {
+    margin: 0;
+    padding: 2rem 1rem 1rem 1rem;
+
+}
+
+.jokeSetup {
+    margin: 0;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
 footer {
     position: relative;
+    bottom: 0;
     padding: 1rem;
     width: 100%;
     bottom: 0;
@@ -78,7 +91,7 @@ footer {
 
 .dark footer a{
 
-    color: var(--darkFont);
+    color: var(--lightBackground);
 
 }
 
@@ -105,7 +118,7 @@ footer {
 }
 .light footer a{
 
-    color: var(--lightFont);
+    color: var(--lightBackground);
 }
 
 .light #mainBody {
