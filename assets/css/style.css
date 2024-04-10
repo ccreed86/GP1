@@ -20,6 +20,20 @@
     padding-bottom: 20px;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.gif {
+width: 50%;
+}
+
+.containers {
+    display: flex;
+    justify-content: space-around;
+    padding: px;
+}
+
 .footer{
     background-color: var(--lightFont);
     
@@ -40,3 +54,4 @@
 /* Light Theme */
 /* Header/Fotter --darkFont(background) --lightFont(font color) */
 /* Body --lightBackground(background) --lightFont(font color) */
+
