@@ -34,6 +34,14 @@ width: 50%;
     padding: px;
 }
 
+.footer{
+    background-color: var(--lightFont);
+    
+}
+
+.footer p a{
+    color:var(--darkFont);
+}
 /* TODO LIST For Theme */
 
 /* Button to change the themes*/
