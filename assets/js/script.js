@@ -10,6 +10,8 @@ const dropdownList=document.querySelector('.dropdown');
 
 const modal = document.querySelector(".modal");
 
+const htmlBody = document.querySelector("#htmlBody")
+
 // Gif button selector
 const gifSwitcher = document.querySelector("#gifSwitcher");
 
@@ -273,6 +275,8 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         mainBody.className = "columns has-text-warning is-size-3 has-background-black";
 
+        htmlBody.className = "has-background-black";
+
         themeSwitcher.textContent = "🤣";
 
       } 
@@ -282,11 +286,15 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
           mainBody.className = "columns has-text-warning is-size-3 has-background-black";
 
+          htmlBody.className = "has-background-black";
+
           themeSwitcher.textContent = "🤣";
 
         }else{
 
           mainBody.className = "columns has-text-warning is-size-3 has-background-white";
+
+          htmlBody.className = "has-background-white";
 
           themeSwitcher.textContent = "😂";
 
@@ -309,6 +317,8 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         mainBody.className = "columns has-text-warning is-size-3 has-background-white";
 
+        htmlBody.className = "has-background-white";
+
         themeSwitcher.textContent = "😂";
 
       }else {
@@ -318,6 +328,8 @@ async function fetchData(category) { ///fetches api data and stores it in local
         localStorage.setItem("theme", "dark");
 
         mainBody.className = "columns has-text-warning is-size-3 has-background-black";
+
+        htmlBody.className = "has-background-black";
 
         themeSwitcher.textContent = "🤣";
 

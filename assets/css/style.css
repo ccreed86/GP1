@@ -8,6 +8,9 @@
 
 *{ 
     font-family: var(--fontFamily);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 #submitButton{
@@ -25,22 +28,23 @@
 }
 
 .gif {
+
 width: 50%;
+
 }
 
 #mainBody {
+
     display: flex;
     justify-content: space-around;
+
 }
 
-.footer{
-    background-color: var(--lightFont);
-    
+footer {
+    padding: 1rem;
+    width: 100%;
 }
 
-.footer p a{
-    color:var(--darkFont);
-}
 /* TODO LIST For Theme */
 
 /* Theme Switcher styles */
@@ -89,7 +93,7 @@ width: 50%;
     color: var(--lightFont);
 }
 
-.ligh #mainBody {
+.light #mainBody {
 
     background-color: var(--lightBackground);
     color: var(--lightFont)
