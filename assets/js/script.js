@@ -24,6 +24,8 @@ const mainBody = document.querySelector("#mainBody");
 
 const imageGif = document.querySelector(".imgGif");
 
+const gifName = document.querySelector("#giphyName");
+
 let mode = "dark";
 
 let modeType;
@@ -36,6 +38,8 @@ saveTheme();
 if(!imageGif){
 
   gifSwitcher.style.display = "none";
+
+  gifName.style.display = "none";
 
 }
 
@@ -216,7 +220,7 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
     function gifSetup(){ //fx to get a random gif from the associated category
 
-        let count = Math.floor(Math.random() * 50);
+        let count = Math.floor(Math.random() * 49);
 
         const gifSetup = document.createElement("img");
 
@@ -229,6 +233,8 @@ async function fetchData(category) { ///fetches api data and stores it in local
         gifContainer.appendChild(gifSetup);
 
         gifSwitcher.style.display = "block";
+
+        gifName.style.display = "block";
 
     }
 
@@ -251,6 +257,8 @@ async function fetchData(category) { ///fetches api data and stores it in local
         
         // below its an config that hides the button for a new gif when it removes the gif
         gifSwitcher.style.display = "none";
+
+        gifName.style.display = "none";
 
       }
 
@@ -350,10 +358,13 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
       event.preventDefault();
 
-      let randomGif = Math.floor(Math.random() * 50);
+      let randomGif = Math.floor(Math.random() * 49);
 
       const gifInfo = JSON.parse(localStorage.getItem("gif"));
 
       document.querySelector(".imgGif").src = gifInfo.data[randomGif].images.original.url;
 
     })
+
+
+   
