@@ -46,19 +46,3 @@
     background-color: var(--lightBackground);
     color: var(--lightFont)
 }
-
-
-
-/* Light Styles End */
-/* TODO LIST For Theme */
-
-/* Button to change the themes*/
-/* localStorage for color so even if you refresh the page it keeps your choice */
-
-/* Dark Theme */
-/* Header/Footer --lightFont(background) --darkFont(font color)*/
-/* Body --darkBackground(background) --darkFont(font color)*/
-
-/* Light Theme */
-/* Header/Fotter --darkFont(background) --lightFont(font color) */
-/* Body --lightBackground(background) --lightFont(font color) */
