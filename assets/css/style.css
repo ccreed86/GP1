@@ -15,6 +15,8 @@
 
 #submitButton{
     width: 5rem;
+    padding: .5rem;
+    margin-left: 1rem;
     height: 3rem;
     background-color: aliceblue;
 }
@@ -33,12 +35,18 @@
 }
 #gigglesContainer{
     text-align: center;
-    padding-right: 2rem;
+    padding: 1rem 2rem;
 }
 
 #gifDiv{
     text-align: center;
-    padding-left: 1em;
+    padding: 1rem;
+}
+#gifSwitcher{
+    margin: 1rem auto;
+}
+#gifTittle{
+    margin-bottom: 1rem;
 }
 
 #gifContainer{
@@ -73,6 +81,29 @@ footer {
     bottom: 0;
 }
 
+#giphyName {
+    background: #121FCF;
+    background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#webTitle {
+    font-size: 2vw;
+}
+
+#webSubTitle {
+    font-size: 1.5vw;
+    padding-top: 1rem;
+}
+
+#gifTitle {
+    font-size: 2.5vw;
+}
+
+#gigglesTitle {
+        font-size: 2.5vw;
+}
 /* TODO LIST For Theme */
 
 /* Theme Switcher styles */
@@ -95,6 +126,41 @@ footer {
 
 }
 
+.dark #webTitle,
+#webSubTitle {
+    background: #008080;
+    background: linear-gradient(to left, #008080 0%, #FFFFFF 25%, #05C1FF 50%, #FFFFFF 75%, #005757 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dark #webSubTitle {
+    background: #008080;
+    background: linear-gradient(to left, #008080 0%, #FFFFFF 25%, #05C1FF 50%, #FFFFFF 75%, #005757 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dark #gigglesTitle {
+    background: #008080;
+    background: linear-gradient(to left, #008080 0%, #FFFFFF 25%, #05C1FF 50%, #FFFFFF 75%, #005757 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.dark #gifTitle {
+    background: #008080;
+    background: linear-gradient(to left, #008080 0%, #FFFFFF 25%, #05C1FF 50%, #FFFFFF 75%, #005757 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.dark .divGiggles{
+    color: white;
+}
+
 .dark #mainBody {
 
     background-color: var(--darkBackground);
@@ -112,6 +178,23 @@ footer {
     color: var(--lightFont);
 }
 
+.light #webTitle, 
+#webSubTitle {
+    background: #959595;
+    background: linear-gradient(to right, #959595 0%, #0D0D0D 46%, #010101 50%, #0A0A0A 53%, #4E4E4E 76%, #383838 87%, #1B1B1B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.light #gifTitle,
+#gigglesTitle {
+    background: #959595;
+    background: linear-gradient(to right, #959595 0%, #0D0D0D 46%, #010101 50%, #0A0A0A 53%, #4E4E4E 76%, #383838 87%, #1B1B1B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
 .light footer {
 
     background-color: var(--darkFont);
@@ -125,4 +208,8 @@ footer {
 
     background-color: var(--lightBackground);
     color: var(--lightFont)
+}
+
+.light .divGiggles{
+    color: black;
 }
