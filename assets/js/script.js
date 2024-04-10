@@ -271,7 +271,7 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         themeStorage = localStorage.setItem("theme", "dark");
 
-        mainBody.className = "has-background-black";
+        mainBody.className = "columns has-text-warning is-size-3 has-background-black";
 
         themeSwitcher.textContent = "🤣";
 
@@ -280,13 +280,13 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         if (themeStorage === "dark"){
 
-          mainBody.className = "has-background-black";
+          mainBody.className = "columns has-text-warning is-size-3 has-background-black";
 
           themeSwitcher.textContent = "🤣";
 
         }else{
 
-          mainBody.className = "has-background-white";
+          mainBody.className = "columns has-text-warning is-size-3 has-background-white";
 
           themeSwitcher.textContent = "😂";
 
@@ -307,7 +307,7 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         localStorage.setItem("theme", "light");
 
-        mainBody.className = "has-background-white";
+        mainBody.className = "columns has-text-warning is-size-3 has-background-white";
 
         themeSwitcher.textContent = "😂";
 
@@ -317,7 +317,7 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         localStorage.setItem("theme", "dark");
 
-        mainBody.className = "has-background-black";
+        mainBody.className = "columns has-text-warning is-size-3 has-background-black";
 
         themeSwitcher.textContent = "🤣";
 
