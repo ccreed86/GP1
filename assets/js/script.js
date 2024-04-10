@@ -176,7 +176,11 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         const jokeSetup = document.createElement("p");
 
+        jokeSetup.className = "jokeSetup"
+
         const jokeDelivery = document.createElement("p");
+
+        jokeDelivery.className = "jokeDelivery"
     
         const jokeInfo = JSON.parse(localStorage.getItem("joke"));
 
