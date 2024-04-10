@@ -28,10 +28,9 @@
 width: 50%;
 }
 
-.containers {
+#mainBody {
     display: flex;
     justify-content: space-around;
-    padding: px;
 }
 
 .footer{
@@ -44,14 +43,54 @@ width: 50%;
 }
 /* TODO LIST For Theme */
 
-/* Button to change the themes*/
-/* localStorage for color so even if you refresh the page it keeps your choice */
+/* Theme Switcher styles */
+/* Dark Styles Start */
+.dark header{
+    
+    background-color: var(--lightFont);
+    color: var(--darkFont);
+}
 
-/* Dark Theme */
-/* Header/Footer --lightFont(background) --darkFont(font color)*/
-/* Body --darkBackground(background) --darkFont(font color)*/
+.dark footer{
 
-/* Light Theme */
-/* Header/Fotter --darkFont(background) --lightFont(font color) */
-/* Body --lightBackground(background) --lightFont(font color) */
+    background-color: var(--lightFont);
+    
+}
 
+.dark footer a{
+
+    color: var(--darkFont);
+
+}
+
+.dark #mainBody {
+
+    background-color: var(--darkBackground);
+    color: var(--darkFont);
+
+}
+
+/* Dark Styles End */
+
+/* Light Styles Start */
+
+.light header{
+
+    background-color: var(--darkFont);
+    color: var(--lightFont);
+}
+
+.light footer {
+
+    background-color: var(--darkFont);
+}
+.light footer a{
+
+    color: var(--lightFont);
+}
+
+.ligh #mainBody {
+
+    background-color: var(--lightBackground);
+    color: var(--lightFont)
+}

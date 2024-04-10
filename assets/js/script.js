@@ -10,6 +10,34 @@ const dropdownList=document.querySelector('.dropdown');
 
 const modal = document.querySelector(".modal");
 
+// Gif button selector
+const gifSwitcher = document.querySelector("#gifSwitcher");
+
+// below the theme selector and the variables
+const themeSwitcher = document.querySelector("#themeSwitcher");
+
+const container = document.querySelector(".container");
+
+const mainBody = document.querySelector("#mainBody");
+
+const imageGif = document.querySelector(".imgGif");
+
+let mode = "dark";
+
+let modeType;
+
+let themeStorage;
+
+saveTheme();
+
+// if there`s no gif displaying it hides the button to new gif
+if(!imageGif){
+
+  gifSwitcher.style.display = "none";
+
+}
+
+// Finish here the theme settings
 const gifyKeyR = ['fNQfgqsi1G5OnBPBlie4e1lN3wVCBTTk', '9tWD3JSotxpdhYNXTURQMtKldzGKZt2t', "jndGrbHB8UNfs39YHeJrJxvGYGulBx2p", "dV41RjkIQ6RJa2Max5a1rGtLNk4c43Hw"];
 
 dropdownButton.addEventListener('click', function(event){ //fx for submit button in modal
@@ -30,7 +58,9 @@ dropdownButton.addEventListener('click', function(event){ //fx for submit button
 document.querySelector('.button')
 
 document.addEventListener('DOMContentLoaded', () => {
+
     // Functions to open and close a modal
+
     function openModal($el) {
 
       $el.classList.add('is-active');
@@ -95,16 +125,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 async function fetchData(category) { ///fetches api data and stores it in local
+
     try {
         // below just a random index to get different key for the gify(it have a low rate limit so we got 4 differents keys to keep using)
         let keyIndex = Math.floor(Math.random() * 4);
+
         // below its the random key variable
         const gifyKey = gifyKeyR[keyIndex];
         
         let jokeUrl=`https://v2.jokeapi.dev/joke/${category}?format=json?blacklistFlags=nsfw,religious,political,racist,sexist,explicit`
         
-        let gifyUrl= `https://api.giphy.com/v1/gifs/search?api_key=${gifyKey}&q=${category}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
-
+        let gifyUrl= `https://api.giphy.com/v1/gifs/search?api_key=${gifyKey}&q=${category}&limit=50&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
 
         const jokeResponse = await fetch(jokeUrl); // Fetching data from the joke API
 
@@ -179,7 +210,7 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
     function gifSetup(){ //fx to get a random gif from the associated category
 
-        let count = Math.floor(Math.random() * 25);
+        let count = Math.floor(Math.random() * 50);
 
         const gifSetup = document.createElement("img");
 
@@ -191,12 +222,15 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         gifContainer.appendChild(gifSetup);
 
+        gifSwitcher.style.display = "block";
+
     }
 
     // and function that will initialize the modal when the user click the button
     initModal.addEventListener("click", function(event){
 
       event.preventDefault();
+      
       // below set the modal active to open
       modal.classList.add('is-active');
 
@@ -208,6 +242,9 @@ async function fetchData(category) { ///fetches api data and stores it in local
         if(gifContainerImg){
 
         gifContainer.removeChild(gifContainerImg);
+        
+        // below its an config that hides the button for a new gif when it removes the gif
+        gifSwitcher.style.display = "none";
 
       }
 
@@ -227,3 +264,80 @@ async function fetchData(category) { ///fetches api data and stores it in local
         
     })
 
+    // Below Function to save the theme and check if exist
+    function saveTheme() {
+
+      if(localStorage.getItem("theme")  === null){
+
+        themeStorage = localStorage.setItem("theme", "dark");
+
+        mainBody.className = "columns has-text-warning is-size-3 has-background-black";
+
+        themeSwitcher.textContent = "🤣";
+
+      } 
+        themeStorage = localStorage.getItem("theme", modeType);
+
+        if (themeStorage === "dark"){
+
+          mainBody.className = "columns has-text-warning is-size-3 has-background-black";
+
+          themeSwitcher.textContent = "🤣";
+
+        }else{
+
+          mainBody.className = "columns has-text-warning is-size-3 has-background-white";
+
+          themeSwitcher.textContent = "😂";
+
+        }
+
+        container.setAttribute("class", themeStorage);
+
+      }
+
+    // Theme Switcher button
+    themeSwitcher.addEventListener("click", function() {
+
+      console.log(mode);
+
+      if (mode === "dark") {
+
+        mode = "light"
+
+        localStorage.setItem("theme", "light");
+
+        mainBody.className = "columns has-text-warning is-size-3 has-background-white";
+
+        themeSwitcher.textContent = "😂";
+
+      }else {
+
+        mode = "dark"
+
+        localStorage.setItem("theme", "dark");
+
+        mainBody.className = "columns has-text-warning is-size-3 has-background-black";
+
+        themeSwitcher.textContent = "🤣";
+
+      }
+
+      modeType = mode;
+
+      saveTheme();
+
+    });
+
+    // Function that allows the user to change the gif if they want
+    gifSwitcher.addEventListener("click", function(event){
+
+      event.preventDefault();
+
+      let randomGif = Math.floor(Math.random() * 50);
+
+      const gifInfo = JSON.parse(localStorage.getItem("gif"));
+
+      document.querySelector(".imgGif").src = gifInfo.data[randomGif].images.original.url;
+
+    })
