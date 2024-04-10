@@ -18,7 +18,11 @@
     height: 3rem;
     background-color: aliceblue;
 }
-
+.divGiggles{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 .modal-card-title {
     padding-bottom: 20px;
 }
@@ -27,7 +31,21 @@
 #gifContainer{
     text-align: center;
 }
+#gigglesContainer{
+    text-align: center;
+    padding-right: 2rem;
+}
 
+#gifDiv{
+    text-align: center;
+    padding-left: 1em;
+}
+
+#gifContainer{
+    display: flex;
+    justify-content: center;
+
+}
 #mainBody {
 
     display: flex;
@@ -52,6 +70,7 @@ footer {
     bottom: 0;
     padding: 1rem;
     width: 100%;
+    bottom: 0;
 }
 
 /* TODO LIST For Theme */
