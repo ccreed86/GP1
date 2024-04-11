@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a webapp that allows users to choose a genre of jokes and gifs to be displayed. The user can choose to display a differnt gif by selecting the corresponding button below the Gif. The modalallows the user to choose between pun, christmas, programming, spooky, and misc.
+This is a webapp that allows users to choose a genre of jokes and gifs to be displayed. The user can choose to display a different gif by selecting the corresponding button below the Gif. The modal allows the user to choose between pun, christmas, programming, spooky, and misc.
 
 ## Installation
 
