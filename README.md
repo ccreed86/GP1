@@ -1,5 +1,3 @@
-# GP1
-First group project. Idea #1. Weather and Movie rec. 
 # Gifs and Giggles Webpapp
 
 ## Description
@@ -48,3 +46,8 @@ SOFTWARE.
 
 ---Images for referance---
 
+![alt text](image.png) - darkmode landing 
+![alt text](image-1.png) - light mode landing
+![alt text](image-2.png) - modal interface
+![alt text](image-3.png) - dark mode conclusion
+![alt text](mage-4.png) - light mode conclusion
