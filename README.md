@@ -21,6 +21,8 @@ https://ucbvirtfsfft0-zhg9511.slack.com/archives/C06RF8W5JM9/p1712342478979269
 Our Joke API is provided by Joke API. 
 https://sv443.net/jokeapi/v2/
 
+Science and Facts were researched form New Your Times and Readers Digest webpages. 
+
 ## License
 
 MIT License
@@ -47,11 +49,13 @@ SOFTWARE.
 
 ## Images for referance
 
-![alt text](image.png) - darkmode landing 
-![alt text](image-1.png) - light mode landing
-![alt text](image-2.png) - modal interface
-![alt text](image-3.png) - dark mode conclusion
-![alt text](image-4.png) - light mode conclusion
+![alt text](images/dm_landing.png) - dark mode landing
+![alt text](images/lm_landing.png) - light mode landing
+![alt text](images/modal.png) - modal interface
+![alt text](images/dm_conclusion.png) - dark mode conclusion
+![alt text](images/lm_conclusion.png) - light mode conclusion
+
+More images from early development in our images folder.
 
 ## Presentation 
 
