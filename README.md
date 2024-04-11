@@ -13,7 +13,7 @@ N/A
 To use Gifs and Giggles, the user should click the choose your laugh button in the head. This will launch the modal. Within the modal you can choose your genre from the dropdown box and click the submit button. This will generate the gif and a joke in the Gif and Giggle columns. The "new gif" button will allow the user to get a new random gif within the genre. The laughing icon image to the right of the Choose your laugh in the head will toggle between the light and dark mode options for the webapp. 
 
 ## Credits
-Our awesome team consists of Erik Gontijo, Reyn Takahashi, Ronald aka "Paulee" Nelson, and Clifton Reed. 
+Our awesome team consists of Erik Gontijo (https://github.com/Erikrainer), Reyn Takahashi (https://github.com/RTAKA808), Ronald aka "Paulee" Nelson (https://github.com/Pauleerama93), and Clifton Reed (https://github.com/ccreed86). 
 
 Our gif API is provided by Giphy
 https://ucbvirtfsfft0-zhg9511.slack.com/archives/C06RF8W5JM9/p1712342478979269
@@ -45,10 +45,15 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.  
 
----Images for referance---
+## Images for referance
 
 ![alt text](image.png) - darkmode landing 
 ![alt text](image-1.png) - light mode landing
 ![alt text](image-2.png) - modal interface
 ![alt text](image-3.png) - dark mode conclusion
 ![alt text](mage-4.png) - light mode conclusion
+
+## Presentation 
+
+Google slides link for Project Presentaion
+https://docs.google.com/presentation/d/1hdRZBDouDOVIgnQ_uny_o0ZdCwqTSZyKvLCX2c-YFfI/edit?usp=sharing
