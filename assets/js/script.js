@@ -439,3 +439,9 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
     })
    
+document.querySelector("#reloadButton").addEventListener('click', function(event){
+
+  event.preventDefault()
+
+  location.reload();
+})
