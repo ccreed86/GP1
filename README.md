@@ -51,7 +51,7 @@ SOFTWARE.
 ![alt text](image-1.png) - light mode landing
 ![alt text](image-2.png) - modal interface
 ![alt text](image-3.png) - dark mode conclusion
-![alt text](mage-4.png) - light mode conclusion
+![alt text](image-4.png) - light mode conclusion
 
 ## Presentation 
 
