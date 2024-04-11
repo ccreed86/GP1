@@ -5,6 +5,7 @@
     --lightBackground: #f2f2f2;
     --fontFamily: Verdana, Geneva, Tahoma, sans-serif;
     background-color: unset;
+    width:auto;
 }
 
 *{ 
@@ -12,6 +13,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+header{
+    width:100%;
 }
 
 #submitButton{
@@ -32,7 +37,7 @@
 }
 
 .container{
-    width:fit-content;
+    width:auto;
 }
 .text-center, 
 #gifContainer{
@@ -40,13 +45,12 @@
 }
 #gigglesContainer{
     text-align: center;
+    width:auto;
 
-    /* padding: 1rem 2rem; */
 }
 
 #gifDiv{
     text-align: center;
-    /* padding: 1rem; */
 }
 #gifSwitcher{
     margin: 1rem auto;
@@ -63,29 +67,24 @@
 #mainBody {
 
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
     height: 100vh;
 
 }
 
 .jokeDelivery {
     margin: 0;
-    padding: 2rem 1rem 1rem 1rem;
+    /* padding: 2rem 1rem 1rem 1rem; */
 
 }
 
 .jokeSetup {
     margin: 0;
-    padding: 1rem 1rem 2rem 1rem;
+    /* padding: 1rem 1rem 2rem 1rem; */
 }
 
-footer {
-    position: relative;
-    bottom: 0;
-    padding: 1rem;
-    width: 100%;
-    bottom: 0;
-}
+
 
 #giphyName {
     background: #121FCF;

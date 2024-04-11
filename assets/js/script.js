@@ -285,7 +285,7 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         themeStorage = localStorage.setItem("theme", "dark");
 
-        mainBody.className = "columns has-text-warning is-size-3 has-background-black";
+        mainBody.className = "column has-background-black";
 
         htmlBody.className = "has-background-black";
 
@@ -296,7 +296,7 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         if (themeStorage === "dark"){
 
-          mainBody.className = "columns has-text-warning is-size-3 has-background-black";
+          mainBody.className = "column has-text-warning is-size-3 has-background-black";
 
           htmlBody.className = "has-background-black";
 
@@ -304,7 +304,7 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         }else{
 
-          mainBody.className = "columns has-text-warning is-size-3 has-background-white";
+          mainBody.className = "column has-text-warning is-size-3 has-background-white";
 
           htmlBody.className = "has-background-white";
 
@@ -327,7 +327,7 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         localStorage.setItem("theme", "light");
 
-        mainBody.className = "columns has-text-warning is-size-3 has-background-white";
+        mainBody.className = "column has-text-warning is-size-3 has-background-white";
 
         htmlBody.className = "has-background-white";
 
@@ -339,7 +339,7 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         localStorage.setItem("theme", "dark");
 
-        mainBody.className = "columns has-text-warning is-size-3 has-background-black";
+        mainBody.className = "column has-text-warning is-size-3 has-background-black";
 
         htmlBody.className = "has-background-black";
 
