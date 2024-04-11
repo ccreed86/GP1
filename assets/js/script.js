@@ -26,6 +26,24 @@ const imageGif = document.querySelector(".imgGif");
 
 const gifName = document.querySelector("#giphyName");
 
+const gifTitle = document.querySelector("#gifTitleNEmoji");
+
+const gigglesTitle = document.querySelector("#gigglesTitleNEmoji");
+
+const initDescription = document.querySelector("#initDescription");
+
+// GitHub Buttons section
+const gitHubButtons = document.querySelector("#gitHubButtons");
+
+const cliffButton = document.querySelector("#cliffButton");
+
+const erikButton = document.querySelector("#erikButton");
+
+const pauleeButton = document.querySelector("#pauleeButton");
+
+const reynButton = document.querySelector("#reynButton");
+// Buttons End
+
 let mode = "dark";
 
 let modeType;
@@ -40,6 +58,14 @@ if(!imageGif){
   gifSwitcher.style.display = "none";
 
   gifName.style.display = "none";
+
+  gigglesTitle.style.display = "none";
+
+  gifTitle.style.display = "none";
+
+  initDescription.style.display = "block";
+
+  gitHubButtons.style.display = "block";
 
 }
 
@@ -236,6 +262,14 @@ async function fetchData(category) { ///fetches api data and stores it in local
 
         gifName.style.display = "block";
 
+        gigglesTitle.style.display = "block";
+
+        gifTitle.style.display = "block";
+
+        initDescription.style.display = "none";
+
+        gitHubButtons.style.display = "none";
+
     }
 
     // and function that will initialize the modal when the user click the button
@@ -259,6 +293,14 @@ async function fetchData(category) { ///fetches api data and stores it in local
         gifSwitcher.style.display = "none";
 
         gifName.style.display = "none";
+
+        gigglesTitle.style.display = "none";
+
+        gifTitle.style.display = "none";
+
+        initDescription.style.display = "block";
+
+        gitHubButtons.style.display = "block";
 
       }
 
@@ -367,4 +409,33 @@ async function fetchData(category) { ///fetches api data and stores it in local
     })
 
 
+    
+    cliffButton.addEventListener("click", function(event){
+
+      event.preventDefault();
+
+      window.open("https://github.com/ccreed86");
+
+    })
+    erikButton.addEventListener("click", function(event){
+      
+      event.preventDefault();
+
+      window.open("https://github.com/Erikrainer");
+
+    })
+    pauleeButton.addEventListener("click", function(event){
+      
+      event.preventDefault();
+
+      window.open("https://github.com/Pauleerama93");
+
+    })
+    reynButton.addEventListener("click", function(event){
+      
+      event.preventDefault();
+
+      window.open("https://github.com/RTAKA808");
+
+    })
    
