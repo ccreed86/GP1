@@ -14,6 +14,7 @@ To use Gifs and Giggles, the user should click the choose your laugh button in t
 
 ## Credits
 Our awesome team consists of Erik Gontijo, Reyn Takahashi, Ronald aka "Paulee" Nelson, and Clifton Reed. 
+
 Our gif API is provided by Giphy
 https://ucbvirtfsfft0-zhg9511.slack.com/archives/C06RF8W5JM9/p1712342478979269
 
