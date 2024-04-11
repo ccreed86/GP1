@@ -67,7 +67,8 @@ header{
 #mainBody {
 
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
     height: 100vh;
 
 }
