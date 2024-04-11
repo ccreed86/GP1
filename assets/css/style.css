@@ -75,17 +75,14 @@ header{
 
 .jokeDelivery {
     margin: 0;
-    /* padding: 2rem 1rem 1rem 1rem; */
-
 }
 
 .jokeSetup {
     margin: 0;
-    /* padding: 1rem 1rem 2rem 1rem; */
 }
-
-
-
+#initDescription{
+    font-size: 4vw;
+}
 #giphyName {
     background: #121FCF;
     background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
@@ -93,25 +90,8 @@ header{
     -webkit-text-fill-color: transparent;
 }
 
-#webTitle {
-    font-size: 2vw;
-}
-
-#webSubTitle {
-    font-size: 1.5vw;
-    padding-top: 1rem;
-}
-
-#gifTitle {
-    font-size: 2.5vw;
-}
-
-#gigglesTitle {
-        font-size: 2.5vw;
-}
-/* TODO LIST For Theme */
-
 /* Theme Switcher styles */
+
 /* Dark Styles Start */
 .dark header{
     
@@ -162,6 +142,14 @@ header{
     font-weight: 900;
 }
 
+.dark #initDescription {
+    background: #008080;
+    background: linear-gradient(to left, #008080 0%, #FFFFFF 25%, #05C1FF 50%, #FFFFFF 75%, #005757 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
 .dark .divGiggles{
     color: white;
 }
@@ -171,6 +159,10 @@ header{
     background-color: var(--darkBackground);
     color: var(--darkFont);
 
+}
+
+.dark .jokeDelivery{
+    color: yellow;
 }
 
 /* Dark Styles End */
@@ -192,7 +184,8 @@ header{
 }
 
 .light #gifTitle,
-#gigglesTitle {
+#gigglesTitle,
+#initDescription {
     background: #959595;
     background: linear-gradient(to right, #959595 0%, #0D0D0D 46%, #010101 50%, #0A0A0A 53%, #4E4E4E 76%, #383838 87%, #1B1B1B 100%);
     -webkit-background-clip: text;
@@ -217,4 +210,8 @@ header{
 
 .light .divGiggles{
     color: black;
+}
+
+.light .jokeDelivery {
+    color: var(--darkFont);
 }
