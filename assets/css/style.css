@@ -4,6 +4,7 @@
     --darkFont: #005792;
     --lightBackground: #f2f2f2;
     --fontFamily: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: unset;
 }
 
 *{ 
@@ -24,28 +25,33 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin: 0 auto;
 }
 .modal-card-title {
     padding-bottom: 20px;
 }
 
+.container{
+    width:fit-content;
+}
 .text-center, 
 #gifContainer{
     text-align: center;
 }
 #gigglesContainer{
     text-align: center;
-    padding: 1rem 2rem;
+
+    /* padding: 1rem 2rem; */
 }
 
 #gifDiv{
     text-align: center;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 #gifSwitcher{
     margin: 1rem auto;
 }
-#gifTittle{
+#gifTitle{
     margin-bottom: 1rem;
 }
 
