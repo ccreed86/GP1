@@ -6,7 +6,7 @@ This is a webapp that allows users to choose a genre of jokes and gifs to be dis
 
 ## Installation
 
-N/A
+[N/A](https://ccreed86.github.io/gifs-n-giggles/)
 
 ## Usage
 
